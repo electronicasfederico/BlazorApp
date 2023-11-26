@@ -15,7 +15,12 @@ WORKDIR /App
 COPY --from=build-env /App/out .
 ENTRYPOINT ["dotnet", "BlazorApp.dll"]
 
-# construir con 
+# construir 
+# local
 # docker build -t blazorapp  .
+
+# desde github
+# docker build -t blazorapp  https://github.com/electronicasfederico/BlazorApp.git
+
 # run 
 # docker run -p 8080:5000 blazorapp 
